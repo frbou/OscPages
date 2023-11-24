@@ -34,7 +34,8 @@ def handlerfunction_prev(s):
         loop = loop - 1
         print('---'+str(loop))
         src = str(loop)+'.html'
-        if loop == 0:
+        if loop <= 0:
+            loop = 0
             src = 'start.html'
         shutil.copy(src, 'main.html')
     else:
